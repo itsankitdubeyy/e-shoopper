@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <b:include data='blog' name='all-head-content'/>
+  <title>e-shoopper</title>
+  
+  <!-- Fonts and Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Turret+Road:wght@200;300;400;500;700;800&amp;display=swap" rel="stylesheet" />
+
+  <b:skin><![CDATA[
+    /* Blogger Required Skin Section - Custom CSS is below in style tag */
+    body { margin: 0; padding: 0; }
+  ]]></b:skin>
+
+  <style>
+    /* --- AAPKA CSS CODE YAHAN HAI --- */
+    :root {
+        --header-height: 3.5rem;
+
+        --title-color: hsl(250, 8%, 15%);
+        --text-color: hsl(250, 8%, 35%);
+        --body-color: hsl(250, 60%, 98%);
+        --container-color: #FFFFFF;
+        --shadow: hsla(0, 0%, 15%, .1);
+        --scrollbar-color: hsl(250, 12%, 90%);
+        --scrollbar-thumb-color: hsl(250, 12%, 80%);
+
+        --body-font: 'Poppins', sans-serif;
+        --signature-font: 'Turret Road', sans-serif;
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+
+        --font-medium: 500;
+        --font-bold: 600;
+
+        --mb0-5: .5rem;
+        --mb0-75: .75rem;
+        --mb1: 1rem;
+        --mb1-5: 1.5rem;
+        --mb2: 2rem;
+        --mb2-5: 2.5rem;
+        --mb3: 3rem;
+
+        --z-tooltip: 10;
+        --z-fixed: 100;
+        
+        --hue: 0;
+        --first-color: hsl(var(--hue), 88%, 61%);
+        --first-color-alt: hsl(var(--hue), 88%, 58%);
+    }
+
+    @media screen and (max-width: 992px) {
+        :root {
+            --biggest-font-size: 2rem;
+            --h1-font-size: 1.5rem;
+            --h2-font-size: 1.25rem;
+            --h3-font-size: 1rem;
+            --normal-font-size: .938rem;
+            --small-font-size: .813rem;
+            --smaller-font-size: .75rem;
+        }
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body,
+    input,
+    button {
+        font-family: var(--body-font);
+        font-size: var(--normal-font-size);
+    }
+
+    button,
+    input {
+        border: none;
+        outline: none;
+    }
+
+    body {
+        background-color: var(--body-color);
+        color: var(--text-color);
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section {
+        padding: 7rem 0 2rem;
+    }
+
+    .section-title,
+    .breadcrumb-title,
+    .breadcrumb-subtitle {
+        text-align: center;
+    }
+
+    .section-title,
+    .breadcrumb-title {
+        font-size: var(--h1-font-size);
+    }
+
+    .section-title,
+    .breadcrumb-subtitle {
+        margin-bottom: var(--mb3);
+    }
+
+    .container {
+        max-width: 968px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid {
+        display: grid;
+    }
+
+    .button {
+        display: inline-block;
+        background: var(--first-color);
+        color: #FFFFFF;
+        padding: 1rem 1.75rem;
+        border-radius: .5rem;
+        font-weight: var(--font-medium);
+        transition: .3s;
+    }
+
+    .button:hover {
+        background: var(--first-color-alt);
+    }
+
+    .button-icon {
+        font-size: 1.25rem;
+    }
+
+    .button-link {
+        color: var(--title-color);
+    }
+
+    .button-flex {
+        display: inline-flex;
+        align-items: center;
+        column-gap: .5rem;
+    }
+
+    .swiper-pagination {
+        position: initial !important;
+        margin-top: var(--mb2-5);
+    }
+
+    .swiper-pagination-bullet {
+        width: 5px !important;
+        height: 5px !important;
+        background: var(--title-color) !important;
+        opacity: 1 !important;
+    }
+
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 .5rem !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 1.5rem !important;
+        height: 5px !important;
+        border-radius: .5rem !important;
+    }
+
+    /* Header */
+    .header {
+        width: 100%;
+        background: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 3rem;
+    }
+
+    .login-toggle,
+    .nav-logo,
+    .nav-toggle,
+    .nav-shop,
+    .nav-close {
+        color: var(--title-color);
+    }
+
+    .nav-logo {
+        text-transform: lowercase;
+        font-weight: var(--font-bold);
+        letter-spacing: 1px;
+        display: inline-flex;
+        align-items: center;
+        column-gap: .25rem;
+    }
+
+    .nav-logo-icon {
+        font-size: 1.25rem;
+    }
+
+    .nav-btns {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+        margin-left: auto;
+    }
+
+    .nav-toggle,
+    .login-toggle,
+    .nav-shop {
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+    }
+
+    .nav-link {
+        color: var(--title-color);
+        font-weight: var(--font-medium);
+        font-size: var(--normal-font-size);
+        transition: .3s;
+    }
+
+    .nav-link:hover {
+        color: var(--first-color);
+    }
+
+    .nav-close {
+        font-size: 2rem;
+        position: absolute;
+        top: 0.9rem;
+        right: 1.25rem;
+        cursor: pointer;
+    }
+
+    .nav-toggle,
+    .nav-close {
+        display: none;
+    }
+
+    .active-link {
+        position: relative;
+    }
+
+    .active-link::before {
+        content: '';
+        position: absolute;
+        bottom: -.75rem;
+        left: 45%;
+        width: 5px;
+        height: 5px;
+        background: var(--title-color);
+        border-radius: 50%;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0.6rem;
+        background: var(--scrollbar-color);
+        border-radius: .5rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-color);
+        border-radius: .5rem;
+    }
+
+    /* Cart */
+    .cart {
+        position: fixed;
+        background-color: var(--body-color);
+        z-index: var(--z-fixed);
+        width: 420px;
+        box-shadow: -2px 0 4px var(--shadow);
+        height: 100%;
+        top: 0;
+        right: -100%;
+        padding: 3.5rem 2rem;
+        transition: .4s;
+    }
+
+    .cart-title-center {
+        font-size: var(--h2-font-size);
+        text-align: center;
+        margin-bottom: var(--mb3);
+    }
+
+    .cart-close {
+        font-size: 2rem;
+        color: var(--title-color);
+        position: absolute;
+        top: 1.25rem;
+        right: 0.9rem;
+        cursor: pointer;
+    }
+
+    .cart-container {
+        display: grid;
+        row-gap: 1.5rem;
+    }
+
+    .cart-card {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    .cart-box {
+        background-color: var(--container-color);
+        padding: 0.75rem 1.25rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .cart-img {
+        width: 85px;
+    }
+
+    .cart-title {
+        font-size: var(--normal-font-size);
+        margin-bottom: var(--mb0-5);
+    }
+
+    .cart-price {
+        display: block;
+        font-size: var(--small-font-size);
+        color: var(--first-color);
+        margin-bottom: var(--mb1-5);
+    }
+
+    .cart-amount,
+    .cart-amount-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .cart-amount {
+        column-gap: 3rem;
+    }
+
+    .cart-amount-content {
+        column-gap: 1rem;
+    }
+
+    .cart-amount-box {
+        display: inline-flex;
+        padding: 0.25rem;
+        background: var(--container-color);
+        cursor: pointer;
+    }
+
+    .cart-amount-trash {
+        font-size: 1.15rem;
+        color: var(--first-color);
+        cursor: pointer;
+    }
+
+    .cart-prices {
+        margin-top: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cart-prices-item,
+    .cart-prices-total {
+        color: var(--title-color);
+    }
+
+    .cart-prices-item {
+        font-size: var(--small-font-size);
+    }
+
+    .cart-prices-total {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+    }
+
+    .show-cart {
+        right: 0;
+    }
+
+    /* Login */
+    .login {
+        position: fixed;
+        background-color: var(--body-color);
+        z-index: var(--z-fixed);
+        width: 420px;
+        box-shadow: -2px 0 4px var(--shadow);
+        height: 100%;
+        top: 0;
+        right: -100%;
+        padding: 3.5rem 2rem;
+        transition: .4s;
+    }
+
+    .login-title-center {
+        font-size: var(--h2-font-size);
+        text-align: center;
+        margin-bottom: var(--mb3);
+    }
+
+    .login-close {
+        font-size: 2rem;
+        color: var(--title-color);
+        position: absolute;
+        top: 1.25rem;
+        right: 0.9rem;
+        cursor: pointer;
+    }
+
+    .login-form {
+        row-gap: 1.5rem;
+    }
+
+    .login-content {
+        background-color: var(--container-color);
+        border-radius: .5rem;
+        padding: 0.75rem 1rem .25rem;
+    }
+
+    .login-label {
+        font-size: var(--small-font-size);
+        color: var(--title-color);
+    }
+
+    .login-input {
+        width: 100%;
+        background: var(--container-color);
+        color: var(--text-color);
+        font-size: var(--normal-font-size);
+        padding: 0.25rem .5rem .5rem 0;
+    }
+
+    .signup {
+        color: var(--title-color);
+        font-size: var(--small-font-size);
+        font-weight: var(--font-medium);
+    }
+
+    .signup a {
+        color: var(--first-color);
+    }
+
+    .show-login {
+        right: 0;
+    }
+
+    /* Home */
+    .home-content {
+        padding: 9rem 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+
+    .home-group {
+        display: grid;
+        position: relative;
+        padding-top: 2rem;
+    }
+
+    .home-img {
+        height: 420px;
+        transform: translateY(-3rem);
+        justify-self: center;
+    }
+
+    .home-indicator {
+        width: 8px;
+        height: 8px;
+        background: var(--title-color);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 15%;
+        left: 45%;
+    }
+
+    .home-indicator::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 75px;
+        background: var(--title-color);
+        top: 0;
+        right: 45%;
+    }
+
+    .home-details-img {
+        position: absolute;
+        bottom: 0;
+        right: 58%;
+    }
+
+    .home-details-title,
+    .home-details-subtitle {
+        display: block;
+        font-size: var(--small-font-size);
+        text-align: right;
+    }
+
+    .home-subtitle {
+        font-size: var(--h3-font-size);
+        text-transform: uppercase;
+        margin-bottom: var(--mb1);
+    }
+
+    .home-title {
+        font-size: var(--biggest-font-size);
+        font-weight: var(--font-bold);
+        line-height: 109%;
+        margin-bottom: var(--mb1-5);
+    }
+
+    .home-description {
+        margin-bottom: var(--mb2-5);
+        padding-right: 2rem;
+    }
+
+    .home-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .scroll-header {
+        background-color: var(--body-color);
+        box-shadow: 0 1px 4px var(--shadow);
+    }
+
+    /* Discount */
+    .discount-container {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        align-items: center;
+        column-gap: 7rem;
+        background-color: var(--container-color);
+        padding: 3rem 0;
+        border-radius: 3rem;
+    }
+
+    .discount-img {
+        width: 200px;
+    }
+
+    .discount-data {
+        padding-left: 6rem;
+        text-align: center;
+    }
+
+    .discount-title {
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb2);
+    }
+
+    /* New */
+    .new-container {
+        padding-top: 1rem;
+    }
+
+    .new-img {
+        width: 150px;
+        margin-bottom: var(--mb1);
+        transition: .3s;
+    }
+
+    .new-content {
+        position: relative !important;
+        background-color: var(--container-color);
+        width: 310px;
+        padding: 2rem 0;
+        border-radius: 1rem;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .new-tag {
+        position: absolute;
+        top: 8%;
+        left: 8%;
+        background-color: var(--first-color);
+        color: #FFFFFF;
+        font-size: var(--small-font-size);
+        padding: 0.25rem .5rem;
+        border-radius: .25rem;
+    }
+
+    .new-title {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+    }
+
+    .new-subtitle {
+        display: block;
+        font-size: var(--small-font-size);
+        margin-bottom: var(--mb1);
+    }
+
+    .new-prices {
+        display: inline-flex;
+        align-items: center;
+        column-gap: .5rem;
+    }
+
+    .new-price {
+        font-weight: var(--font-medium);
+        color: var(--title-color);
+    }
+
+    .new-discount {
+        color: var(--first-color);
+        font-size: var(--smaller-font-size);
+        text-decoration: line-through;
+        font-weight: var(--font-medium);
+    }
+
+    .new-button {
+        display: inline-flex;
+        padding: 0.5rem;
+        border-radius: .25rem .25rem .75rem .25rem;
+        position: absolute;
+        bottom: 0;
+        right: -3rem;
+    }
+
+    .new-icon {
+        font-size: 1.25rem;
+    }
+
+    .new-content:hover .new-img {
+        transform: translateY(-0.5rem);
+    }
+
+    .new-content:hover .new-button {
+        right: 0;
+    }
+
+    /* Steps */
+    .steps-bg {
+        background-color: var(--container-color);
+        padding: 3.5rem 2.5rem;
+        border-radius: 1rem;
+    }
+
+    .steps-container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        padding-top: 1rem;
+    }
+
+    .steps-card {
+        background-color: var(--body-color);
+        padding: 2.5rem 3rem 2rem 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .steps-card-number {
+        display: inline-block;
+        background-color: var(--first-color);
+        color: #FFFFFF;
+        padding: 0.5rem .75rem;
+        border-radius: .25rem;
+        font-size: var(--h2-font-size);
+        margin-bottom: var(--mb1-5);
+        transition: .3s;
+    }
+
+    .steps-card-title {
+        font-size: var(--normal-font-size);
+        margin-bottom: var(--mb0-5);
+    }
+
+    .steps-card-description {
+        font-size: var(--small-font-size);
+    }
+
+    .step-card:hover .steps-card-number {
+        transform: translateY(-0.25rem);
+    }
+
+    /* Newsletter */
+    .newsletter-container {
+        display: grid;
+        grid-template-columns: .5fr;
+        justify-content: center;
+    }
+
+    .newsletter-description {
+        padding: 0 3rem;
+        text-align: center;
+        margin-bottom: var(--mb1-5);
+    }
+
+    .newsletter-form {
+        background-color: var(--container-color);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        border-radius: .75rem;
+    }
+
+    .newsletter-input {
+        width: 70%;
+        padding: 0 .5rem;
+        background: none;
+        color: var(--title-color);
+    }
+
+    .newsletter-input::placeholder {
+        color: var(--text-color);
+    }
+
+    /* Footer */
+    .footer {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        column-gap: 1rem;
+    }
+
+    .footer-logo {
+        color: var(--title-color);
+        text-transform: lowercase;
+        font-weight: var(--font-bold);
+        letter-spacing: 1px;
+        display: inline-flex;
+        align-items: center;
+        column-gap: .25rem;
+        margin-bottom: var(--mb1);
+    }
+
+    .footer-logo-icon {
+        font-size: 1rem;
+    }
+
+    .footer-description {
+        margin-bottom: var(--mb2-5);
+    }
+
+    .footer-social {
+        display: flex;
+        column-gap: .75rem;
+    }
+
+    .footer-social-link {
+        display: inline-flex;
+        background-color: var(--container-color);
+        padding: 0.25rem;
+        color: var(--title-color);
+        font-size: 1rem;
+        border-radius: .25rem;
+    }
+
+    .footer-social-link:hover {
+        background-color: var(--first-color);
+        color: #FFFFFF;
+    }
+
+    .footer-title {
+        font-size: var(--h3-font-size);
+        margin-bottom: var(--mb1);
+    }
+
+    .footer-links {
+        display: grid;
+        row-gap: .35rem;
+    }
+
+    .footer-link {
+        font-size: var(--small-font-size);
+        color: var(--text-color);
+        transition: .3s;
+    }
+
+    .footer-link:hover {
+        color: var(--first-color);
+    }
+
+    .footer-copy {
+        display: block;
+        text-align: center;
+        font-size: var(--smaller-font-size);
+        margin-top: 6rem;
+    }
+
+    .footer-copy a {
+        font-family: var(--signature-font);
+        color: var(--title-color);
+        transition: .3s;
+    }
+
+    .footer-copy a:hover {
+        color: var(--first-color);
+    }
+
+    /* Scroll up */
+    .scrollUp {
+        position: fixed;
+        right: 1rem;
+        bottom: -30%;
+        background: var(--first-color);
+        border-radius: .4rem;
+        display: inline-flex;
+        padding: 0.25rem;
+        z-index: var(--z-tooltip);
+        opacity: .8;
+        transition: .4s;
+    }
+
+    .scrollUp:hover {
+        opacity: 1;
+    }
+
+    .scrollup-icon {
+        font-size: 1.5rem;
+        color: #FFFFFF;
+    }
+
+    .show-scroll {
+        bottom: 3rem;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 1200px) {
+        .home-img {
+            height: 400px;
+        }
+
+        .swiper-pagination {
+            margin-top: var(--mb2);
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .container {
+            margin-left: var(--mb1-5);
+            margin-right: var(--mb1-5);
+        }
+
+        .section-title {
+            font-size: var(--h2-font-size);
+            margin-bottom: var(--mb2);
+        }
+
+        .home-content {
+            padding: 8rem 0 2rem;
+        }
+
+        .home-img {
+            height: 300px;
+            transform: translateY(0);
+        }
+
+        .home-indicator {
+            bottom: initial;
+            left: initial;
+            top: 7rem;
+            right: 2rem;
+        }
+
+        .home-indicator::after {
+            top: -3rem;
+            height: 48px;
+        }
+
+        .home-details-img {
+            right: 0.5rem;
+            bottom: initial;
+        }
+
+        .home-description {
+            padding-right: 0;
+        }
+
+        .swiper-pagination {
+            margin-top: var(--mb2);
+        }
+
+        .discount-pagination {
+            margin-top: var(--mb2);
+        }
+
+        .new-content {
+            width: 242px;
+            padding: 2rem 0 1.5rem 0;
+        }
+
+        .new-img {
+            width: 120px;
+        }
+
+        .new-img,
+        .new-subtitle {
+            margin-bottom: var(--mb0-5);
+        }
+
+        .new-title {
+            font-size: var(--normal-font-size);
+        }
+
+        .steps-bg {
+            padding: 3rem 2rem 2rem;
+        }
+
+        .steps-container {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 776px) {
+        body {
+            margin: var(--header-height) 0 0 0;
+        }
+
+        .section {
+            padding: 4.5rem 0 2rem;
+        }
+
+        .nav {
+            height: var(--header-height);
+        }
+
+        .nav-menu {
+            position: fixed;
+            background-color: var(--body-color);
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            padding: 6rem 2rem 3.5rem;
+            transition: .5s;
+        }
+
+        .nav-list {
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+
+        .nav-close,
+        .nav-toggle {
+            display: block;
+        }
+
+        .home-content {
+            padding: 0;
+            grid-template-columns: 1fr;
+            row-gap: 1rem;
+        }
+
+        .show-menu {
+            right: 0;
+        }
+
+        .home-content {
+            padding: 0;
+            grid-template-columns: 1fr;
+            row-gap: 1rem;
+        }
+
+        .home-img {
+            height: 250px;
+        }
+
+        .home-title {
+            margin-bottom: var(--mb1);
+        }
+
+        .home-description {
+            margin-bottom: var(--mb1-5);
+        }
+
+        .swiper-pagination {
+            margin-top: var(--mb1-5);
+        }
+
+        .discount-container {
+            grid-template-columns: 1fr;
+            row-gap: 1.25rem;
+            padding: 2.5rem 0 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .discount-img {
+            justify-self: center;
+            order: 1;
+        }
+
+        .discount-data {
+            padding-left: 0;
+        }
+
+        .newsletter-container {
+            grid-template-columns: .7fr;
+        }
+
+        .footer-container {
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+            justify-self: center;
+            align-items: center;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-social {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-copy {
+            margin-top: 4.5rem;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .steps-container {
+            grid-template-columns: 1fr;
+        }
+
+        .steps-bg {
+            padding: 3rem 2rem 2rem;
+        }
+
+        .newsletter-container {
+            grid-template-columns: 1fr;
+        }
+
+        .login,
+        .cart {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 330px) {
+        .container {
+            margin-left: var(--mb1);
+            margin-right: var(--mb1);
+        }
+
+        .nav {
+            column-gap: 0;
+        }
+
+        .home-img {
+            height: 200px;
+        }
+
+        .home-buttons {
+            flex-direction: column;
+            width: max-content;
+            row-gap: 1rem;
+        }
+
+        .steps-bg {
+            padding: 2rem 1rem;
+        }
+
+        .steps-card {
+            padding: 1.5rem;
+        }
+    }
+  </style>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/" class="nav-logo">
+                <i class='bx bxs-shopping-bags nav-logo-icon'></i> e-shoopper
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="/" class="nav-link active-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Cart</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+
+            <div class="nav-btns">
+                <div class="login-toggle" id="login-button"><i class='bx bx-user'></i></div>
+                <div class="nav-shop" id="cart-shop"><i class='bx bx-shopping-bag'></i></div>
+                <div class="nav-toggle" id="nav-toggle"><i class='bx bx-grid-alt'></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart " id="cart">
+        <i class='bx bx-x cart-close' id="cart-close"></i>
+
+        <h2 class="cart-title-center">My Cart</h2>
+
+        <div class="cart-container">
+            <article class="cart-card">
+                <div class="cart-box">
+                    <img src="https://i.postimg.cc/hjwgkCbL/cart-1.png" alt="" class="cart-img" />
+                </div>
+
+                <div class="cart-details">
+                    <h3 class="cart-title">Windbreaker</h3>
+                    <span class="cart-price">$12</span>
+
+                    <div class="cart-amount">
+                        <div class="cart-amount-content">
+                            <span class="cart-amount-box"><i class='bx bx-minus'></i></span>
+                            <span class="cart-amount-number">1</span>
+                            <span class="cart-amount-box"><i class='bx bx-plus'></i></span>
+                        </div>
+                        <i class='bx bx-trash-alt cart-amount-trash'></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart-card">
+                <div class="cart-box">
+                    <img src="https://i.postimg.cc/J0kK1QSV/cart-2.png" alt="" class="cart-img" />
+                </div>
+
+                <div class="cart-details">
+                    <h3 class="cart-title">Cardigan Hoodie</h3>
+                    <span class="cart-price">$16</span>
+
+                    <div class="cart-amount">
+                        <div class="cart-amount-content">
+                            <span class="cart-amount-box"><i class='bx bx-minus'></i></span>
+                            <span class="cart-amount-number">1</span>
+                            <span class="cart-amount-box"><i class='bx bx-plus'></i></span>
+                        </div>
+                        <i class='bx bx-trash-alt cart-amount-trash'></i>
+                    </div>
+                </div>
+            </article>
+
+            <article class="cart-card">
+                <div class="cart-box">
+                    <img src="https://i.postimg.cc/D0LdVwb7/cart-3.png" alt="" class="cart-img" />
+                </div>
+
+                <div class="cart-details">
+                    <h3 class="cart-title">Cartoon</h3>
+                    <span class="cart-price">$10</span>
+
+                    <div class="cart-amount">
+                        <div class="cart-amount-content">
+                            <span class="cart-amount-box"><i class='bx bx-minus'></i></span>
+                            <span class="cart-amount-number">1</span>
+                            <span class="cart-amount-box"><i class='bx bx-plus'></i></span>
+                        </div>
+                        <i class='bx bx-trash-alt cart-amount-trash'></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="cart-prices">
+            <span class="cart-pirces-item">3 items</span>
+            <span class="cart-pirces-item">$38</span>
+        </div>
+    </div>
+
+    <div class="login" id="login">
+        <i class='bx bx-x login-close' id="login-close"></i>
+
+        <h2 class="login-title-center">Login</h2>
+
+        <form action="" class="login-form grid">
+            <div class="login-content">
+                <label for="" class="login-label">Email</label>
+                <input type="email" class="login-input" />
+            </div>
+
+            <div class="login-content">
+                <label for="" class="login-label">Password</label>
+                <input type="password" class="login-input" />
+            </div>
+
+            <div>
+                <a href="#" class="button">Sign In</a>
+            </div>
+
+            <div>
+                <p class="signup">Not a member? <a href="#">Sign up now</a></p>
+            </div>
+        </form>
+    </div>
+
+    <main class="main">
+        <section class="home container">
+            <div class="swiper home-swiper">
+                <div class="swiper-wrapper">
+                    <section class="swiper-slide">
+                        <div class="home-content grid">
+                            <div class="home-group">
+                                <img src="https://i.postimg.cc/FHrrbY93/slide-2.png" alt="" class="home-img" />
+
+                                <div class="home-indicator"></div>
+
+                                <div class="home-details-img">
+                                    <h4 class="home-details-title">The "Cardigan"</h4>
+                                    <span class="home-details-subtitle">Woolen</span>
+                                </div>
+                            </div>
+
+                            <div class="home-data">
+                                <h3 class="home-subtitle">#1 TRENDING ITEM</h3>
+                                <h1 class="home-title">EXPRESS YOURSELF</h1>
+                                <p class="home-description">Craft your individuality. Handcrafted with passion, it was made for those who dare to be different</p>
+
+                                <div class="home-buttons">
+                                    <a href="#" class="button">Buy Now</a>
+                                    <a href="#" class="button-link button-flex">View Details <i class="bx bx-right-arrow-alt button-icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home-content grid">
+                            <div class="home-group">
+                                <img src="https://i.postimg.cc/MTF55f2T/slide-3.png" alt="" class="home-img" />
+
+                                <div class="home-indicator"></div>
+
+                                <div class="home-details-img">
+                                    <h4 class="home-details-title">Jqueezy</h4>
+                                    <span class="home-details-subtitle">Ski Suit</span>
+                                </div>
+                            </div>
+
+                            <div class="home-data">
+                                <h3 class="home-subtitle">#2 TOP BEST DUO</h3>
+                                <h1 class="home-title">FALL WINTER <br/> 2025</h1>
+                                <p class="home-description">The future of fashion is here, where warmth meets style. Own the season. Own the look</p>
+
+                                <div class="home-buttons">
+                                    <a href="#" class="button">Buy Now</a>
+                                    <a href="#" class="button-link button-flex">View Details <i class="bx bx-right-arrow-alt button-icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="swiper-slide">
+                        <div class="home-content grid">
+                            <div class="home-group">
+                                <img src="https://i.postimg.cc/jjk3gFyt/slide-1.png" alt="" class="home-img" />
+
+                                <div class="home-indicator"></div>
+
+                                <div class="home-details-img">
+                                    <h4 class="home-details-title">Jurry</h4>
+                                    <span class="home-details-subtitle">Zipper</span>
+                                </div>
+                            </div>
+
+                            <div class="home-data">
+                                <h3 class="home-subtitle">#3 TRENDING ITEM</h3>
+                                <h1 class="home-title">SALE 20% <br/> OFF ON <br/> EVERYTHING</h1>
+                                <p class="home-description">Don't Miss Out! 20% Off Everything for a Limited Time</p>
+
+                                <div class="home-buttons">
+                                    <a href="#" class="button">Buy Now</a>
+                                    <a href="#" class="button-link button-flex">View Details <i class="bx bx-right-arrow-alt button-icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="discount section">
+            <div class="discount-container container grid">
+                <img src="https://i.postimg.cc/K8d4FZPW/discount.png" alt="" class="discount-img" />
+
+                <div class="discount-data">
+                    <h2 class="discount-title">50% Discount <br/> On new Products</h2>
+                    <a href="#" class="button">Go to new</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="new section">
+            <h2 class="section-title">New Arrivals</h2>
+
+            <div class="new-container container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="new-content swiper-slide">
+                            <div class="new-tag">New</div>
+                            <img src="https://i.postimg.cc/2SNPfMqw/new-1.png" alt="" class="new-img" />
+                            <h3 class="new-title">Windbreaker Jacket</h3>
+                            <span class="new-subtitle">Accessory</span>
+
+                            <div class="new-prices">
+                                <span class="new-price">$14.99</span>
+                                <span class="new-discount">$29.99</span>
+                            </div>
+
+                            <a href="#" class="button new-button"><i class="bx bx-cart-alt new-icon"></i></a>
+                        </div>
+
+                        <div class="new-content swiper-slide">
+                            <div class="new-tag">New</div>
+                            <img src="https://i.postimg.cc/QtRrKttL/new-2.png" alt="" class="new-img" />
+                            <h3 class="new-title">Air Jordan Zipper</h3>
+                            <span class="new-subtitle">Accessory</span>
+
+                            <div class="new-prices">
+                                <span class="new-price">$11.99</span>
+                                <span class="new-discount">$21.99</span>
+                            </div>
+
+                            <a href="#" class="button new-button"><i class="bx bx-cart-alt new-icon"></i></a>
+                        </div>
+
+                        <div class="new-content swiper-slide">
+                            <div class="new-tag">New</div>
+                            <img src="https://i.postimg.cc/bNkVZPJK/new-3.png" alt="" class="new-img" />
+                            <h3 class="new-title">Fur Jacket</h3>
+                            <span class="new-subtitle">Accessory</span>
+
+                            <div class="new-prices">
+                                <span class="new-price">$4.99</span>
+                                <span class="new-discount">$9.99</span>
+                            </div>
+
+                            <a href="#" class="button new-button"><i class="bx bx-cart-alt new-icon"></i></a>
+                        </div>
+
+                        <div class="new-content swiper-slide">
+                            <div class="new-tag">New</div>
+                            <img src="https://i.postimg.cc/90TbwPWG/new-4.png" alt="" class="new-img" />
+                            <h3 class="new-title">Fleece Jacket</h3>
+                            <span class="new-subtitle">Accessory</span>
+
+                            <div class="new-prices">
+                                <span class="new-price">$24.99</span>
+                                <span class="new-discount">$44.99</span>
+                            </div>
+
+                            <a href="#" class="button new-button"><i class="bx bx-cart-alt new-icon"></i></a>
+                        </div>
+
+                        <div class="new-content swiper-slide">
+                            <div class="new-tag">New</div>
+                            <img src="https://i.postimg.cc/GhFzcjgR/new-5.png" alt="" class="new-img" />
+                            <h3 class="new-title">Floral Blouse</h3>
+                            <span class="new-subtitle">Accessory</span>
+
+                            <div class="new-prices">
+                                <span class="new-price">$7.99</span>
+                                <span class="new-discount">$14.99</span>
+                            </div>
+
+                            <a href="#" class="button new-button"><i class="bx bx-cart-alt new-icon"></i></a>
+                        </div>
+
+                        <div class="new-content swiper-slide">
+                            <div class="new-tag">New</div>
+                            <img src="https://i.postimg.cc/MH8R4CSQ/new-6.png" alt="" class="new-img" />
+                            <h3 class="new-title">Nike Jacket</h3>
+                            <span class="new-subtitle">Accessory</span>
+
+                            <div class="new-prices">
+                                <span class="new-price">$5.99</span>
+                                <span class="new-discount">$12.99</span>
+                            </div>
+
+                            <a href="#" class="button new-button"><i class="bx bx-cart-alt new-icon"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="steps section container">
+            <div class="steps-bg">
+                <h2 class="section-title">How to order products <br/> from e-shopper</h2>
+
+                <div class="steps-container grid">
+                    <div class="steps-card">
+                        <div class="steps-card-number">01</div>
+                        <h3 class="steps-card-title">Choose Products</h3>
+                        <p class="steps-card-description">We have several varieties you can choose from</p>
+                    </div>
+
+                    <div class="steps-card">
+                        <div class="steps-card-number">02</div>
+                        <h3 class="steps-card-title">Place an Order</h3>
+                        <p class="steps-card-description">Once your order is set, we move to the next step which is shipping</p>
+                    </div>
+
+                    <div class="steps-card">
+                        <div class="steps-card-number">03</div>
+                        <h3 class="steps-card-title">Get Order Delivered</h3>
+                        <p class="steps-card-description">Our delivery process is easy, you receive the order direct to your home</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter section">
+            <div class="newsletter-container container">
+                <h2 class="section-title">Our Newsletter</h2>
+                <p class="newsletter-description">Promotion new products and sales. Directly to your inbox</p>
+
+                <form action="" class="newsletter-form">
+                    <input type="text" placeholder="Enter your email" class="newsletter-input" />
+                    <button class="button">Subscribe</button>
+                </form>
+            </div>
+            
+        </section>
+        
+        <!-- Blogger Required Section (Hidden but necessary for installation) -->
+        <b:section id='main-blog-content' showaddelement='no' style='display:none;'>
+            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'/>
+        </b:section>
+
+    </main>
+
+    <footer class="footer section">
+        <div class="footer-container container grid">
+            <div class="footer-content">
+                <a href="#" class="footer-logo"><i class="bx bxs-shopping-bag footer-logo-icon"> e-shopper</i></a>
+                <p class="footer-description">Enjoy the biggest sale <br/> of your life</p>
+
+                <ul class="footer-social">
+                    <a href="#" class="footer-social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="footer-social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="footer-social-link"><i class="ri-twitter-x-line"></i></a>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h3 class="footer-title">About</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">About us</a></li>
+                    <li><a href="#" class="footer-link">Customer Support</a></li>
+                    <li><a href="#" class="footer-link">Support Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h3 class="footer-title">Our Services</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Shop</a></li>
+                    <li><a href="#" class="footer-link">Discounts</a></li>
+                    <li><a href="#" class="footer-link">Shipping Mode</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <h3 class="footer-title">Our Company</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Register</a></li>
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span class="footer-copy">&#169; <a href="">ULTRA CODE</a>. All rights reserved</span>
+    </footer>
+
+    <a href="#" class="scrollUp" id="scroll-up"><i class="bx bx-up-arrow-alt scrollup-icon"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    //<![CDATA[
+    // Swiper JS Home
+    var homeSwiper = new Swiper(".home-swiper", {
+        spaceBetween: 30,
+        loop: 'true',
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
+
+    // Scroll Header
+    function scrollHeader(){
+        const header = document.getElementById('header');
+        if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+    }
+    window.addEventListener('scroll', scrollHeader);
+
+    // Swiper JS New
+    var newSwiper = new Swiper(".new-swiper", {
+    spaceBetween: 16,
+    centeredSlides: true,
+    slidesPerView: 1,
+    loop: 'true',
+    breakpoints: {
+        576: {
+        slidesPerView: 2,
+        },
+        776: {
+        slidesPerView: 3,
+        },
+    }
+    });
+
+    // Show Cart 
+    const cart = document.getElementById('cart');
+    const cartShop = document.getElementById('cart-shop');
+    const cartClose = document.getElementById('cart-close');
+
+    if(cartShop){ cartShop.addEventListener("click", () => { cart.classList.add('show-cart'); }) }
+    if(cartClose){ cartClose.addEventListener("click", () => { cart.classList.remove('show-cart'); }) }
+
+    // Show Login
+    const login = document.getElementById('login');
+    const loginButton = document.getElementById('login-button');
+    const loginClose = document.getElementById('login-close');
+
+    if(loginButton){ loginButton.addEventListener("click", () => { login.classList.add('show-login'); } )}
+    if(loginClose){ loginClose.addEventListener("click", () => { login.classList.remove('show-login'); } )}
+
+    // Show Scroll up 
+    function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    if(this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    }
+    window.addEventListener("scroll", scrollUp);
+
+    // Show Menu
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+
+    if(navToggle) { navToggle.addEventListener("click", () => { navMenu.classList.add('show-menu'); } )}
+    if(navClose) { navClose.addEventListener("click", () => { navMenu.classList.remove('show-menu'); } )}
+    //]]>
+    </script>
+</body>
+</html>
